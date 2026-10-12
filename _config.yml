@@ -1,0 +1,11 @@
+title: Swung Out
+tagline: Only in it for the music.
+description: Swung Out Records. Sharing electronic music from London to the world.
+url: https://swungoutrecords.com
+email: swungoutrecords@gmail.com
+exclude: [README.md, scripts, Gemfile, Gemfile.lock]
+social:
+  spotify: https://open.spotify.com/user/gam13mqe54r9uf2sx251kjebu
+  soundcloud: https://soundcloud.com/swungoutrecords
+  instagram: https://www.instagram.com/swungoutrecords/
+  bandcamp: https://swungout.bandcamp.com/

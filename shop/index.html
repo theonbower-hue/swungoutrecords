@@ -1,0 +1,18 @@
+---
+layout: default
+title: Clothing
+permalink: /shop/
+---
+<section class="block">
+  <h1>Clothing</h1>
+  <p>All of our tees are printed to order using the highest quality 200gsm cotton.</p>
+  <div class="grid two products">
+    {% for p in site.data.products %}
+    <a class="card" href="{{ '/shop/' | append: p.slug | append: '/' | relative_url }}">
+      <img src="{{ '/assets/img/' | append: p.imgs[0] | relative_url }}" alt="{{ p.name }}" loading="lazy">
+      <span class="name">{{ p.name }}</span>
+      <span class="price">{{ p.price }}{% if p.was %} <s>{{ p.was }}</s>{% endif %}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>

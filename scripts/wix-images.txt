@@ -1,0 +1,27 @@
+# local-name  wix-media-id   (original files from static.wixstatic.com/media/<id>)
+logo.png fdfaf2_0377b7f3e15b4bb5b3f8576facf8cf29~mv2.png
+sngt007.jpg fdfaf2_b2838fa44bc340b5a98cb3cc1d7574b7~mv2.jpg
+skyline.jpg fdfaf2_ca4858b3a2f34e5ab158b5f7b45ad490~mv2.jpg
+the-disguise.jpg fdfaf2_97a62e62369e4591b72adb4c62be33a0~mv2.jpg
+do-what-you-feel.jpg fdfaf2_3d8e453a9eaa4ab681fc0347d46ee31e~mv2.jpg
+i-wanna-love-you.jpg fdfaf2_8b18ed1b02e54843a8c4c7a69f462576~mv2.jpg
+what-a-day.jpg fdfaf2_e0a5a5bf5e594ef188822ccfa4566b34~mv2.jpg
+mix-001.jpg fdfaf2_648d441e2cb94835a64492c6456c4694~mv2.jpg
+jljd-1.jpg fdfaf2_bd4f000717654862bb011dc7fdf46dde~mv2.jpg
+jljd-2.jpg fdfaf2_003d4d08904b4a39b78295a207577621~mv2.jpg
+jljd-3.jpg fdfaf2_05e64659a7b849fbac1113d7fa161d18~mv2.jpg
+jljd-4.jpg fdfaf2_7fb42b4091ba431c911317335f13ebb4~mv2.jpg
+oiifm-1.jpg fdfaf2_ae1ec9f7cee9441fa3ae2d862b19f71f~mv2.jpg
+oiifm-2.jpg fdfaf2_c6dfa00974d74e88af335d1b039a7d8d~mv2.jpg
+oiifm-3.jpg fdfaf2_3e8e82e2f6534ad9ab07e11dce4e57d0~mv2.jpg
+oiifm-4.jpg fdfaf2_b97dd87efefb49db8f5027726db954d3~mv2.jpg
+sib-1.jpg fdfaf2_031b4a9dc3614d5ea81733a4085af47d~mv2.jpg
+sib-2.jpg fdfaf2_60b2676606ed4ebdab9f61ac98dc40af~mv2.jpg
+sib-3.jpg fdfaf2_359e2d8095b24825a883379c6fa78d12~mv2.jpg
+sib-4.jpg fdfaf2_7d86c3c88ca7477eb24dce8593c7c17c~mv2.jpg
+og-1.jpg fdfaf2_321cde288dc543309129679c7a706f5e~mv2.jpg
+og-2.jpg fdfaf2_f300d87d4dec4a1ebe4cf94624bc4452~mv2.jpg
+og-3.jpg fdfaf2_1ff7777bbc874f7dbbc420ab56996406~mv2.jpg
+og-4.jpg fdfaf2_0c3f7a3f05b54e5a8102c28b5720a12f~mv2.jpg
+og-5.jpg fdfaf2_64b93f0c20684f6190b936e70c92d1ee~mv2.jpg
+og-6.jpg fdfaf2_340f0310a731495a9634640fcbfa5c87~mv2.jpg

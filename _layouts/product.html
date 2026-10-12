@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{% assign p = site.data.products | where: "slug", page.slug | first %}
+<section class="product">
+  <div class="gallery">
+    {% for img in p.imgs %}<img src="{{ '/assets/img/' | append: img | relative_url }}" alt="{{ p.name }}, photo {{ forloop.index }}" loading="lazy">{% endfor %}
+  </div>
+  <div class="details">
+    <h1>{{ p.name }}</h1>
+    <p class="price">{{ p.price }}{% if p.was %} <s>{{ p.was }}</s>{% endif %}</p>
+    <p>{{ p.blurb }}</p>
+    <p><strong>Sizes:</strong> {{ p.sizes }}<br><strong>Colours:</strong> {{ p.colours }}</p>
+    {% if p.buy_url != "" %}
+    <a class="button" href="{{ p.buy_url }}">Buy now</a>
+    {% else %}
+    <a class="button" href="mailto:{{ site.email }}?subject=Order: {{ p.name | uri_escape }}&body=Size:%0AColour:%0AShipping address:">Order by email</a>
+    {% endif %}
+    <h2>Details</h2>
+    <ul>
+      <li>Oversized high neck unisex t-shirt, baggy but true to size.</li>
+      <li>100% organic ring-spun combed cotton, 200gsm heavyweight.</li>
+      <li>Dropped shoulders, wide 1x1 rib neck collar with single topstitch.</li>
+      <li>Inside back neck tape in self fabric; wide double-needle topstitching on sleeve and bottom hems.</li>
+      <li>Printed to order. UK orders usually ship within 48 hours.</li>
+    </ul>
+  </div>
+</section>

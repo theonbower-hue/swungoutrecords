@@ -1,0 +1,16 @@
+---
+layout: default
+title: Records
+permalink: /records/
+---
+<section class="block">
+  <h1>Swung Out Records</h1>
+  <div class="grid three">
+    {% for r in site.data.releases %}
+    <figure>
+      {% if r.link %}<a href="{{ r.link }}">{% else %}<a href="{{ site.social.bandcamp }}">{% endif %}<img src="{{ '/assets/img/' | append: r.img | relative_url }}" alt="{{ r.artist }} – {{ r.title }} artwork" loading="lazy"></a>
+      <figcaption>{% if r.cat %}<span class="eyebrow">{{ r.cat }}</span>{% endif %}<strong>{{ r.artist }}</strong> {{ r.title }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>

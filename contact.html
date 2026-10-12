@@ -1,0 +1,27 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+<section class="block prose">
+  <h1>Contact</h1>
+  <p>If you wanna get in touch about:</p>
+  <ul>
+    <li>Signing your records to our label</li>
+    <li>Any merch-related questions</li>
+    <li>Submitting a mix for our mix series</li>
+    <li>Submitting tunes to one of our playlists</li>
+    <li>Anything else you think would interest us</li>
+  </ul>
+  <p>Hit us up below, or email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  <form class="contact" action="https://formsubmit.co/{{ site.email }}" method="POST">
+    <input type="hidden" name="_subject" value="New message from swungoutrecords.com">
+    <input type="hidden" name="_next" value="{{ '/contact/thanks/' | absolute_url }}">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <label>First name <input name="first_name" required></label>
+    <label>Last name <input name="last_name"></label>
+    <label>Email <input type="email" name="email" required></label>
+    <label>Message <textarea name="message" rows="6" required></textarea></label>
+    <button class="button" type="submit">Send</button>
+  </form>
+</section>

@@ -1,0 +1,38 @@
+# buy_url: paste a Stripe Payment Link (or other checkout URL) here.
+# Left empty, the button falls back to ordering by email.
+- slug: jesus-loves-jazzy-dubs-tee
+  name: Jesus Loves Jazzy Dubs Tee
+  price: "£37.40"
+  was: "£46.75"
+  sizes: XS, S, M, L, XL, 2XL, 3XL
+  colours: Black, Midnight Grey
+  blurb: A play on the iconic UK Garage tee from Todd Edwards.
+  imgs: [jljd-1.jpg, jljd-2.jpg, jljd-3.jpg, jljd-4.jpg]
+  buy_url: ""
+- slug: only-in-it-for-the-music-tee
+  name: Only In It For The Music Tee
+  price: "£37.40"
+  was: "£46.75"
+  sizes: XS, S, M, L, XL, 2XL, 3XL
+  colours: Black, Midnight Grey
+  blurb: "Designed using the waveform of the classic 'Amen Break' sample."
+  imgs: [oiifm-1.jpg, oiifm-2.jpg, oiifm-3.jpg, oiifm-4.jpg]
+  buy_url: ""
+- slug: spin-it-back-tee
+  name: Spin It Back Tee
+  price: "£37.40"
+  was: "£46.75"
+  sizes: XS, S, M, L, XL, 2XL, 3XL
+  colours: Black, Midnight Grey
+  blurb: "Can I get a Reload?! This one for our hi-NRG loving friends."
+  imgs: [sib-1.jpg, sib-2.jpg, sib-3.jpg, sib-4.jpg]
+  buy_url: ""
+- slug: swung-out-og-tee
+  name: Swung Out OG Tee
+  price: "£37.40"
+  was: "£46.75"
+  sizes: XS, S, M, L, XL, 2XL
+  colours: Cream (Raw Natural Cotton), Black, Midnight Grey
+  blurb: The original Swung Out tee.
+  imgs: [og-1.jpg, og-2.jpg, og-3.jpg, og-4.jpg, og-5.jpg, og-6.jpg]
+  buy_url: ""

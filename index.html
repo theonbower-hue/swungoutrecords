@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% assign latest = site.data.releases | first %}
+<section class="intro">
+  <h1 class="kicker">A record label. London.</h1>
+  <p class="statement">Swung Out shares electronic music from London to the world. Records, mixes, playlists and clothing, made because we're only in it for the music.</p>
+</section>
+
+<section class="feature full">
+  <a href="{{ latest.link }}">
+    <img src="{{ '/assets/img/' | append: latest.img | relative_url }}" alt="{{ latest.cat }} artwork">
+  </a>
+  <div class="feature-caption">
+    <span>Latest release · {{ latest.cat }}</span>
+    <span>{{ latest.artist }} – {{ latest.title }}</span>
+    <a href="{{ latest.link }}">Listen →</a>
+  </div>
+</section>
+
+<section class="split">
+  {% for p in site.data.products limit:2 %}
+  <a class="portrait" href="{{ '/shop/' | append: p.slug | append: '/' | relative_url }}">
+    <img src="{{ '/assets/img/' | append: p.imgs[0] | relative_url }}" alt="{{ p.name }}" loading="lazy">
+    <span class="label">{{ p.name }}</span>
+  </a>
+  {% endfor %}
+</section>
+
+<section class="steps">
+  <h2 class="kicker">What we do</h2>
+  <ol>
+    <li><span class="num">01</span><div><h3>Release records</h3><p>House, disco, breaks and electronica from Theon Bower and friends.</p><a href="{{ '/records/' | relative_url }}">The catalogue →</a></div></li>
+    <li><span class="num">02</span><div><h3>Mix series</h3><p>Long-form mixes from the label and the people we rate.</p><a href="{{ '/mix-series/' | relative_url }}">Listen →</a></div></li>
+    <li><span class="num">03</span><div><h3>Curate playlists</h3><p>The best electronic music, curated by Swung Out and updated weekly.</p><a href="{{ '/playlists/' | relative_url }}">On Spotify →</a></div></li>
+    <li><span class="num">04</span><div><h3>Make clothing</h3><p>Heavyweight 200gsm organic cotton tees, printed to order. We wear our hearts on our sleeves.</p><a href="{{ '/shop/' | relative_url }}">Shop →</a></div></li>
+    <li><span class="num">05</span><div><h3>Collaborate</h3><p>DJs, producers, curators, designers, promoters. If you want to make something, get in touch.</p><a href="{{ '/contact/' | relative_url }}">Contact →</a></div></li>
+  </ol>
+</section>
+
+<section class="work">
+  <p class="statement small">Our releases span house, proto-house, boogie, disco and breaks.</p>
+  <div class="cards">
+    {% for r in site.data.releases limit:6 %}
+    <a class="card" href="{{ r.link | default: site.social.bandcamp }}">
+      <img src="{{ '/assets/img/' | append: r.img | relative_url }}" alt="{{ r.artist }} – {{ r.title }} artwork" loading="lazy">
+      <span class="card-title">{{ r.title }}</span>
+      <span class="card-meta">{{ r.artist }}{% if r.cat %} · {{ r.cat }}{% endif %}</span>
+      <span class="card-link">Listen</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>

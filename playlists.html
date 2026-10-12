@@ -1,0 +1,15 @@
+---
+layout: default
+title: Spotify Playlists
+permalink: /playlists/
+---
+<section class="block">
+  <h1>Spotify Playlists</h1>
+  <p>The best electronic music, curated for you by Swung Out. Updated weekly.</p>
+  <div class="grid two">
+    {% for url in site.data.playlists %}{% assign id = url | split: "/" | last %}
+    <iframe title="Swung Out playlist {{ forloop.index }}" src="https://open.spotify.com/embed/playlist/{{ id }}" width="100%" height="352" frameborder="0" loading="lazy" allow="encrypted-media"></iframe>
+    {% endfor %}
+  </div>
+  <a class="button" href="{{ site.social.spotify }}">See all playlists on Spotify</a>
+</section>

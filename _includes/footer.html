@@ -1,0 +1,6 @@
+<footer class="site-footer">
+  <a class="footer-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+  {% include social.html %}
+  <p><a href="{{ '/about/' | relative_url }}">About</a> · <a href="{{ '/contact/' | relative_url }}">Contact</a></p>
+  <small>© Swung Out Records {{ 'now' | date: '%Y' }}. Sharing electronic music from London to the world.</small>
+</footer>
