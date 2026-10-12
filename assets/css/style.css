@@ -114,3 +114,14 @@ summary { cursor: pointer; font-weight: 500; }
 .site-footer .footer-email { font-size: clamp(1.4rem, 3.5vw, 2.6rem); letter-spacing: -0.02em; font-weight: 500; text-decoration: none; }
 .social { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 20px; }
 .site-footer small { color: var(--muted); }
+
+/* Cookie consent */
+.consent {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 50; max-width: 560px;
+  background: var(--fg); color: var(--bg); padding: 16px 20px; border-radius: 12px;
+  display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between;
+}
+.consent[hidden] { display: none; }
+.consent p { margin: 0; font-size: .95rem; flex: 1 1 240px; }
+.consent .button { background: var(--bg); color: var(--fg); border-color: var(--bg); padding: 8px 16px; }
+.consent .button.ghost { background: transparent; color: var(--bg); }

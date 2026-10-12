@@ -12,9 +12,9 @@ layout: default
     <p>{{ p.blurb }}</p>
     <p><strong>Sizes:</strong> {{ p.sizes }}<br><strong>Colours:</strong> {{ p.colours }}</p>
     {% if p.buy_url != "" %}
-    <a class="button" href="{{ p.buy_url }}">Buy now</a>
+    <a class="button" href="{{ p.buy_url }}" onclick="soTrack('InitiateCheckout', {content_ids: [{{ p.slug | jsonify | escape }}], value: {{ p.price | remove: '£' }}, currency: 'GBP'})">Buy now</a>
     {% else %}
-    <a class="button" href="mailto:{{ site.email }}?subject=Order: {{ p.name | uri_escape }}&body=Size:%0AColour:%0AShipping address:">Order by email</a>
+    <a class="button" href="mailto:{{ site.email }}?subject=Order: {{ p.name | uri_escape }}&body=Size:%0AColour:%0AShipping address:" onclick="soTrack('InitiateCheckout', {value: {{ p.price | remove: '£' }}, currency: 'GBP'})">Order by email</a>
     {% endif %}
     <h2>Details</h2>
     <ul>

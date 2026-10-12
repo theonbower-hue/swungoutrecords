@@ -14,7 +14,7 @@ permalink: /contact/
     <li>Anything else you think would interest us</li>
   </ul>
   <p>Hit us up below, or email <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
-  <form class="contact" action="https://formsubmit.co/{{ site.email }}" method="POST">
+  <form class="contact" onsubmit="soTrack('Contact')" action="https://formsubmit.co/{{ site.email }}" method="POST">
     <input type="hidden" name="_subject" value="New message from swungoutrecords.com">
     <input type="hidden" name="_next" value="{{ '/contact/thanks/' | absolute_url }}">
     <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
