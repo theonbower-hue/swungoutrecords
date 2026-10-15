@@ -1,20 +1,18 @@
 {% if site.brevo_form_url != "" %}
   {% capture signup_url %}{{ site.brevo_form_url }}{% if site.brevo_form_url contains "?" %}&{% else %}?{% endif %}isAjax=1{% endcapture %}
-  {% assign email_field = "EMAIL" %}{% assign name_field = "FIRSTNAME" %}
+  {% assign email_field = "EMAIL" %}
 {% else %}
   {% capture signup_url %}https://formsubmit.co/ajax/{{ site.email }}{% endcapture %}
-  {% assign email_field = "email" %}{% assign name_field = "name" %}
+  {% assign email_field = "email" %}
 {% endif %}
 <section class="signup{% if include.compact %} compact{% endif %}">
   {% unless include.compact %}<p class="kicker">Mailing list</p>
-  <h2>Get new releases, mixes and drops first.</h2>{% endunless %}
+  <h2>New releases, mixes and drops. First.</h2>{% endunless %}
   <form class="signup-form" action="{{ signup_url | strip }}" method="POST">
     {% if site.brevo_form_url != "" %}<input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="locale" value="en">
     {% else %}<input type="hidden" name="_subject" value="New mailing list signup"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">{% endif %}
-    <label class="visually-hidden" for="su-name-{{ include.id }}">First name</label>
-    <input id="su-name-{{ include.id }}" name="{{ name_field }}" placeholder="First name" autocomplete="given-name">
     <label class="visually-hidden" for="su-email-{{ include.id }}">Email</label>
-    <input id="su-email-{{ include.id }}" type="email" name="{{ email_field }}" placeholder="Email address" autocomplete="email" required>
+    <input id="su-email-{{ include.id }}" type="email" name="{{ email_field }}" placeholder="Your email address" autocomplete="email" required>
     <button class="button" type="submit">Sign up</button>
   </form>
   <p class="signup-note" aria-live="polite">No spam. Unsubscribe anytime.</p>
