@@ -12,7 +12,8 @@ document.querySelectorAll(".signup-form").forEach(function (form) {
         return r.json().catch(function () { return {}; });
       })
       .then(function (data) {
-        if (data && data.success === false) throw new Error("rejected");
+        // FormSubmit returns success:"true"; Brevo returns success:true.
+        if (data && (data.success === false || data.success === "false")) throw new Error("rejected");
         form.reset();
         form.hidden = true;
         note.textContent = "You're in. Check your inbox.";

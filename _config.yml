@@ -16,8 +16,8 @@ meta_pixel_id: "1928515603861809"
 facebook_domain_verification: rjvidzriuy0wwq2tzyrv0o4xwtb9ko
 google_site_verification: ZPs412K5IGewkTCYs62AqAkpqLiqBrdOn0QETq1jO9k
 
-# Email signup. Once MailerLite is set up, paste the account and form IDs
-# from the form's embed code (assets.mailerlite.com/jsonp/<account>/forms/<form>/subscribe).
-# Until then, signups are emailed to the address above so none are lost.
-mailerlite_account: ""
-mailerlite_form: ""
+# Email signup via Brevo. Paste the form's action URL from Brevo
+# (Contacts > Forms > your form > Share > Embed / HTML code: the <form action="..."> value,
+# e.g. https://xxxx.sibforms.com/serve/MUIF...). Until set, signups are emailed to the
+# address above so none are lost.
+brevo_form_url: ""
