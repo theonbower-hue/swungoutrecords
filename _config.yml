@@ -11,7 +11,8 @@ social:
   bandcamp: https://swungout.bandcamp.com/
 
 # Meta (Facebook) Pixel. Paste the numeric Pixel ID from Meta Events Manager.
-# Only loads after a visitor accepts cookies (UK GDPR/PECR).
+# require_consent: true shows a cookie banner and holds events until Accept.
+require_consent: false
 meta_pixel_id: "1928515603861809"
 facebook_domain_verification: rjvidzriuy0wwq2tzyrv0o4xwtb9ko
 google_site_verification: ZPs412K5IGewkTCYs62AqAkpqLiqBrdOn0QETq1jO9k

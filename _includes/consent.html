@@ -1,11 +1,11 @@
 {% if site.meta_pixel_id != "" %}
-<div class="consent" id="consent" hidden>
+{% if site.require_consent %}<div class="consent" id="consent" hidden>
   <p>We use cookies (Meta Pixel) to measure our ads and improve the site.</p>
   <div>
     <button class="button" data-consent="granted">Accept</button>
     <button class="button ghost" data-consent="denied">Decline</button>
   </div>
-</div>
+</div>{% endif %}
 <script>
 // Meta Pixel with Meta's consent API: the pixel loads on every page (so Meta's
 // tools can detect it) but sends nothing until the visitor clicks Accept.
@@ -18,7 +18,7 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
   var KEY = "so-consent";
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
-  var state = get();
+  var state = {{ site.require_consent | default: false }} ? get() : "granted";
   fbq('consent', state === "granted" ? 'grant' : 'revoke');
   fbq('init', '{{ site.meta_pixel_id }}');
   fbq('track', 'PageView');
@@ -27,6 +27,7 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
   {% endif %}
   window.soTrack = function (name, params) { fbq('track', name, params || {}); };
   var banner = document.getElementById("consent");
+  if (!banner) return;
   if (!state) banner.hidden = false;
   banner.addEventListener("click", function (e) {
     var v = e.target.getAttribute("data-consent");
