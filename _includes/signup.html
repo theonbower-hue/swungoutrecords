@@ -1,0 +1,21 @@
+{% if site.mailerlite_account != "" and site.mailerlite_form != "" %}
+  {% capture signup_url %}https://assets.mailerlite.com/jsonp/{{ site.mailerlite_account }}/forms/{{ site.mailerlite_form }}/subscribe{% endcapture %}
+  {% assign email_field = "fields[email]" %}{% assign name_field = "fields[name]" %}
+{% else %}
+  {% capture signup_url %}https://formsubmit.co/ajax/{{ site.email }}{% endcapture %}
+  {% assign email_field = "email" %}{% assign name_field = "name" %}
+{% endif %}
+<section class="signup{% if include.compact %} compact{% endif %}">
+  {% unless include.compact %}<p class="kicker">Mailing list</p>{% endunless %}
+  {% unless include.compact %}<h2>Get new releases, mixes and drops first.</h2>{% endunless %}
+  <form class="signup-form" action="{{ signup_url | strip }}" method="POST">
+    {% if site.mailerlite_account != "" %}<input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">
+    {% else %}<input type="hidden" name="_subject" value="New mailing list signup"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">{% endif %}
+    <label class="visually-hidden" for="su-name-{{ include.id }}">First name</label>
+    <input id="su-name-{{ include.id }}" name="{{ name_field }}" placeholder="First name" autocomplete="given-name">
+    <label class="visually-hidden" for="su-email-{{ include.id }}">Email</label>
+    <input id="su-email-{{ include.id }}" type="email" name="{{ email_field }}" placeholder="Email address" autocomplete="email" required>
+    <button class="button" type="submit">Sign up</button>
+  </form>
+  <p class="signup-note" aria-live="polite">No spam. Unsubscribe anytime.</p>
+</section>

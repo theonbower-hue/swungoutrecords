@@ -2,7 +2,7 @@
   <a class="logo" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Swung Out" width="72" height="69"></a>
   <p class="tagline">Only in it for the music.</p>
   <nav>
-    {% assign nav = "Home:/,About:/about/,Records:/records/,Mix Series:/mix-series/,Spotify Playlists:/playlists/,Clothing:/shop/" | split: "," %}
+    {% assign nav = "Home:/,About:/about/,Records:/records/,Mix Series:/mix-series/,Spotify Playlists:/playlists/,Clothing:/shop/,Sign up:/signup/" | split: "," %}
     {% for item in nav %}{% assign p = item | split: ":" %}
     <a href="{{ p[1] | relative_url }}"{% if page.url == p[1] %} aria-current="page"{% endif %}>{{ p[0] }}</a>
     {% endfor %}
