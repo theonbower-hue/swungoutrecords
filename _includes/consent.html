@@ -7,34 +7,33 @@
   </div>
 </div>
 <script>
+// Meta Pixel with Meta's consent API: the pixel loads on every page (so Meta's
+// tools can detect it) but sends nothing until the visitor clicks Accept.
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
 (function () {
   var KEY = "so-consent";
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
-  function loadPixel() {
-    if (window.fbq) return;
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '{{ site.meta_pixel_id }}');
-    fbq('track', 'PageView');
-    {% if page.layout == "product" %}{% assign p = site.data.products | where: "slug", page.slug | first %}
-    fbq('track', 'ViewContent', { content_name: {{ p.name | jsonify }}, content_ids: [{{ p.slug | jsonify }}], content_type: 'product', value: {{ p.price | remove: "£" }}, currency: 'GBP' });
-    {% endif %}
-  }
-  // Fire a standard event if the pixel is loaded; safe to call when it isn't.
-  window.soTrack = function (name, params) { if (window.fbq) fbq('track', name, params || {}); };
-  var banner = document.getElementById("consent");
   var state = get();
-  if (state === "granted") loadPixel();
-  else if (state !== "denied") banner.hidden = false;
+  fbq('consent', state === "granted" ? 'grant' : 'revoke');
+  fbq('init', '{{ site.meta_pixel_id }}');
+  fbq('track', 'PageView');
+  {% if page.layout == "product" %}{% assign p = site.data.products | where: "slug", page.slug | first %}
+  fbq('track', 'ViewContent', { content_name: {{ p.name | jsonify }}, content_ids: [{{ p.slug | jsonify }}], content_type: 'product', value: {{ p.price | remove: "£" }}, currency: 'GBP' });
+  {% endif %}
+  window.soTrack = function (name, params) { fbq('track', name, params || {}); };
+  var banner = document.getElementById("consent");
+  if (!state) banner.hidden = false;
   banner.addEventListener("click", function (e) {
     var v = e.target.getAttribute("data-consent");
     if (!v) return;
     set(v); banner.hidden = true;
-    if (v === "granted") loadPixel();
+    // Queued events (PageView etc.) are sent once consent is granted.
+    fbq('consent', v === "granted" ? 'grant' : 'revoke');
   });
 })();
 </script>
