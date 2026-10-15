@@ -19,7 +19,16 @@ document.querySelectorAll(".signup-form").forEach(function (form) {
         note.textContent = "You're in. Check your inbox.";
         if (window.soTrack) soTrack("Lead", { content_name: "Mailing list" });
       })
-      .catch(function () {
+      .catch(function (err) {
+        // A network/CORS failure (TypeError): fall back to a normal form post,
+        // which lands on the provider's own confirmation page.
+        if (err instanceof TypeError && !form.dataset.fallback) {
+          form.dataset.fallback = "1";
+          if (window.soTrack) soTrack("Lead", { content_name: "Mailing list" });
+          form.action = form.action.replace(/[?&]isAjax=1/, "");
+          form.submit();
+          return;
+        }
         btn.disabled = false;
         note.textContent = "Something went wrong. Please try again.";
       });
