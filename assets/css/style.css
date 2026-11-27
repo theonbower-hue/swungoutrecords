@@ -36,6 +36,7 @@ main { padding: 0 var(--pad); max-width: var(--max); margin: 0 auto; }
 /* Homepage */
 .intro { padding: clamp(48px, 10vw, 140px) 0 clamp(40px, 6vw, 80px); }
 .statement { font-size: clamp(1.8rem, 4.6vw, 4rem); line-height: 1.05; letter-spacing: -0.03em; font-weight: 500; margin: 0; max-width: 22ch; }
+.statement.one-line { white-space: nowrap; max-width: none; font-size: clamp(1rem, 5.2vw, 4rem); }
 .statement.small { font-size: clamp(1.4rem, 3vw, 2.4rem); max-width: 28ch; margin-bottom: 40px; }
 
 .feature.full { margin: 0 calc(-1 * var(--pad)); }
