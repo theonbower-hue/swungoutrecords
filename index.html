@@ -3,8 +3,7 @@ layout: default
 ---
 {% assign latest = site.data.releases | first %}
 <section class="intro">
-  <h1 class="kicker">A record label. London.</h1>
-  <p class="statement">Swung Out shares electronic music from London to the world. Records, mixes, playlists and clothing, made because we're only in it for the music.</p>
+  <h1 class="statement">Dance floor-ready cuts from London</h1>
 </section>
 
 <section class="feature full">
@@ -28,28 +27,12 @@ layout: default
 </section>
 
 <section class="steps">
-  <h2 class="kicker">What we do</h2>
   <ol>
-    <li><span class="num">01</span><div><h3>Release records</h3><p>House, disco, breaks and electronica from Theon Bower and friends.</p><a href="{{ '/records/' | relative_url }}">The catalogue →</a></div></li>
-    <li><span class="num">02</span><div><h3>Mix series</h3><p>Long-form mixes from the label and the people we rate.</p><a href="{{ '/mix-series/' | relative_url }}">Listen →</a></div></li>
-    <li><span class="num">03</span><div><h3>Curate playlists</h3><p>The best electronic music, curated by Swung Out and updated weekly.</p><a href="{{ '/playlists/' | relative_url }}">On Spotify →</a></div></li>
-    <li><span class="num">04</span><div><h3>Make clothing</h3><p>Heavyweight 200gsm organic cotton tees, printed to order. We wear our hearts on our sleeves.</p><a href="{{ '/shop/' | relative_url }}">Shop →</a></div></li>
-    <li><span class="num">05</span><div><h3>Collaborate</h3><p>DJs, producers, curators, designers, promoters. If you want to make something, get in touch.</p><a href="{{ '/contact/' | relative_url }}">Contact →</a></div></li>
+    <li><span class="num">01</span><div><h3>Records</h3><p>House, disco, breaks and electronica from Theon Bower and friends.</p><a href="{{ '/records/' | relative_url }}">The catalogue →</a></div></li>
+    <li><span class="num">02</span><div><h3>Mixes</h3><p>Long-form mixes from the label and the people we rate.</p><a href="{{ '/mix-series/' | relative_url }}">Listen →</a></div></li>
+    <li><span class="num">03</span><div><h3>Playlists</h3><p>The best electronic music, curated by Swung Out and updated weekly.</p><a href="{{ '/playlists/' | relative_url }}">On Spotify →</a></div></li>
+    <li><span class="num">04</span><div><h3>Apparel</h3><p>Heavyweight 200gsm organic cotton tees, printed to order. We wear our hearts on our sleeves.</p><a href="{{ '/shop/' | relative_url }}">Shop →</a></div></li>
   </ol>
-</section>
-
-<section class="work">
-  <p class="statement small">Our releases span house, proto-house, boogie, disco and breaks.</p>
-  <div class="cards">
-    {% for r in site.data.releases limit:6 %}
-    <a class="card" href="{{ r.link | default: site.social.bandcamp }}">
-      <img src="{{ '/assets/img/' | append: r.img | relative_url }}" alt="{{ r.artist }} – {{ r.title }} artwork" loading="lazy">
-      <span class="card-title">{{ r.title }}</span>
-      <span class="card-meta">{{ r.artist }}{% if r.cat %} · {{ r.cat }}{% endif %}</span>
-      <span class="card-link">Listen</span>
-    </a>
-    {% endfor %}
-  </div>
 </section>
 
 {% include signup.html id="home" %}
