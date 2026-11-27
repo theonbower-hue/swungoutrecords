@@ -35,17 +35,4 @@ layout: default
   </ol>
 </section>
 
-<section class="work">
-  <div class="cards">
-    {% for r in site.data.releases limit:6 %}
-    <a class="card" href="{{ r.link | default: site.social.bandcamp }}">
-      <img src="{{ '/assets/img/' | append: r.img | relative_url }}" alt="{{ r.artist }} – {{ r.title }} artwork" loading="lazy">
-      <span class="card-title">{{ r.title }}</span>
-      <span class="card-meta">{{ r.artist }}{% if r.cat %} · {{ r.cat }}{% endif %}</span>
-      <span class="card-link">Listen</span>
-    </a>
-    {% endfor %}
-  </div>
-</section>
-
 {% include signup.html id="home" %}
