@@ -21,6 +21,20 @@ layout: default
   </div>
 </section>
 
+<section class="release-hero">
+  <a class="release-art" href="{{ '/mix-series/' | relative_url }}">
+    <img src="{{ '/assets/img/mix-001.jpg' | relative_url }}" alt="Swung Out Mix Series #001 artwork" loading="lazy">
+  </a>
+  <div class="release-info">
+    <span class="eyebrow">Mix Series · #001</span>
+    <h2>Theon Bower</h2>
+    <p class="release-meta">2.5 hours of house, proto-house, tech, boogie &amp; electronica from the label founder.</p>
+    <a class="button" href="{{ '/mix-series/' | relative_url }}">Listen now</a>
+    <a class="button ghost" href="https://soundcloud.com/swungoutrecords/swung-out-mix-series-001">SoundCloud</a>
+    <a class="release-more" href="{{ '/mix-series/' | relative_url }}">Tracklist and all mixes →</a>
+  </div>
+</section>
+
 <section class="split">
   {% for p in site.data.products limit:2 %}
   <a class="portrait" href="{{ '/shop/' | append: p.slug | append: '/' | relative_url }}">
