@@ -6,14 +6,18 @@ layout: default
   <h1 class="statement one-line">Dance floor-ready cuts from London to the world.</h1>
 </section>
 
-<section class="feature full">
-  <a href="{{ latest.link }}">
-    <img src="{{ '/assets/img/' | append: latest.img | relative_url }}" alt="{{ latest.cat }} artwork">
+<section class="release-hero">
+  <a class="release-art" href="{{ latest.link }}">
+    <img src="{{ latest.art }}" alt="{{ latest.artist }} – {{ latest.title }} artwork">
   </a>
-  <div class="feature-caption">
-    <span>Latest release · {{ latest.cat }}</span>
-    <span>{{ latest.artist }} – {{ latest.title }}</span>
-    <a href="{{ latest.link }}">Listen →</a>
+  <div class="release-info">
+    <span class="eyebrow">Latest release{% if latest.cat %} · {{ latest.cat }}{% endif %}</span>
+    <h2>{{ latest.title }}</h2>
+    <p class="release-artist">{{ latest.artist }}</p>
+    <p class="release-meta">{% if latest.format %}{{ latest.format }} · {% endif %}Out {{ latest.date | date: "%-d %B %Y" }}</p>
+    <a class="button" href="{{ latest.link }}">Listen now</a>
+    {% if latest.bandcamp %}<a class="button ghost" href="{{ latest.bandcamp }}">Buy on Bandcamp</a>{% endif %}
+    <a class="release-more" href="{{ '/records/' | relative_url }}">All releases →</a>
   </div>
 </section>
 

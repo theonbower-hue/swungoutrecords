@@ -8,8 +8,8 @@ permalink: /records/
   <div class="grid three">
     {% for r in site.data.releases %}
     <figure>
-      {% if r.link %}<a href="{{ r.link }}">{% else %}<a href="{{ site.social.bandcamp }}">{% endif %}<img src="{{ '/assets/img/' | append: r.img | relative_url }}" alt="{{ r.artist }} – {{ r.title }} artwork" loading="lazy"></a>
-      <figcaption>{% if r.cat %}<span class="eyebrow">{{ r.cat }}</span>{% endif %}<strong>{{ r.artist }}</strong> {{ r.title }}</figcaption>
+      <a href="{{ r.link }}"><img src="{{ r.art | replace: '_10.jpg', '_16.jpg' }}" alt="{{ r.artist }} – {{ r.title }} artwork" loading="lazy"></a>
+      <figcaption><span class="eyebrow">{{ r.date | date: "%Y" }}{% if r.cat %} · {{ r.cat }}{% endif %}</span><strong>{{ r.artist }}</strong> {{ r.title }}</figcaption>
     </figure>
     {% endfor %}
   </div>
