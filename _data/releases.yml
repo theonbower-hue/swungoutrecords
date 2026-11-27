@@ -1,21 +1,55 @@
-# Newest first. `link` is where "Listen" goes; fill in for older releases.
+# Newest first, matching swungout.bandcamp.com/music. The first entry is featured on the homepage.
+# `art` is the Bandcamp artwork URL (f4.bcbits.com, _10 = full size). `link` is where the artwork and Listen go (smart link or Bandcamp); `bandcamp` adds a Buy on Bandcamp link.
+- cat: "SNGT#009"
+  artist: Les Freak
+  title: Freak
+  format: Single
+  date: 2026-11-27
+  link: https://www.intellijend.com/l/freak-sngt009
+  bandcamp: https://swungout.bandcamp.com/track/freak
+  art: https://f4.bcbits.com/img/a0939435886_10.jpg
+- artist: Theon Bower
+  title: The Rush
+  date: 2026-08-01
+  link: https://theonbower.bandcamp.com/album/the-rush?label=10907320&tab=music
+  art: https://f4.bcbits.com/img/a4141754973_10.jpg
 - cat: "SNGT#007"
   artist: Theon Bower
   title: Recording Now
+  date: 2026-07-01
+  link: https://theonbower.bandcamp.com/album/recording-now?label=10907320&tab=music
+  art: https://f4.bcbits.com/img/a2091176282_10.jpg
   img: sngt007.jpg
-  link: https://hypeddit.com/theonbower/recordingnow
 - artist: Theon Bower
-  title: "Skyline (Clara's Song)"
-  img: skyline.jpg
+  title: Singularity EP
+  date: 2024-05-01
+  link: https://theonbower.bandcamp.com/album/singularity-ep?label=10907320&tab=music
+  art: https://f4.bcbits.com/img/a2413643960_10.jpg
 - artist: Theon Bower
-  title: The Disguise
+  title: "Common Goldfish – Tottenham Ritzy (Theon Bower Remix)"
+  date: 2024-01-01
+  link: https://theonbower.bandcamp.com/album/common-goldfish-tottenham-ritzy-theon-bower-remix?label=10907320&tab=music
+  art: https://f4.bcbits.com/img/a3456192875_10.jpg
+- artist: Theon Bower
+  title: The Disguise EP
+  date: 2022-12-01
+  link: https://theonbower.bandcamp.com/album/the-disguise-ep?label=10907320&tab=music
+  art: https://f4.bcbits.com/img/a2052803001_10.jpg
   img: the-disguise.jpg
 - artist: Theon Bower & J Love
   title: Do What You Feel
+  date: 2022-07-01
+  link: https://theonbower.bandcamp.com/album/do-what-you-feel?label=10907320&tab=music
+  art: https://f4.bcbits.com/img/a3867235607_10.jpg
   img: do-what-you-feel.jpg
 - artist: Theon Bower & Takao
-  title: I Wanna Love You
+  title: I Wanna Love You EP
+  date: 2022-06-01
+  link: https://theonbower.bandcamp.com/album/i-wanna-love-you-ep?label=10907320&tab=music
+  art: https://f4.bcbits.com/img/a4271999112_10.jpg
   img: i-wanna-love-you.jpg
 - artist: Theon Bower
-  title: What A Day
-  img: what-a-day.jpg
+  title: Family Business EP
+  date: 2022-01-01
+  link: https://theonbower.bandcamp.com/album/family-business-ep?label=10907320&tab=music
+  art: https://f4.bcbits.com/img/a0815700711_10.jpg
