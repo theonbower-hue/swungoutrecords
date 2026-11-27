@@ -53,6 +53,7 @@ main { padding: 0 var(--pad); max-width: var(--max); margin: 0 auto; }
 .release-artist { font-size: clamp(1.1rem, 2vw, 1.6rem); margin: 0 0 .4em; }
 .release-meta { color: var(--muted); margin: 0 0 28px; }
 .release-info .button { margin: 0 8px 8px 0; }
+.release-info h2 + .button { margin-top: 24px; }
 .release-info .button.ghost { background: transparent; color: var(--fg); }
 .release-info .button.ghost:hover { background: var(--fg); color: var(--bg); }
 .release-more { display: block; margin-top: 20px; font-size: .95rem; }
