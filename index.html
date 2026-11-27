@@ -36,7 +36,6 @@ layout: default
 </section>
 
 <section class="work">
-  <p class="statement small">Our releases span house, proto-house, boogie, disco and breaks.</p>
   <div class="cards">
     {% for r in site.data.releases limit:6 %}
     <a class="card" href="{{ r.link | default: site.social.bandcamp }}">
